@@ -1,5 +1,5 @@
 """
-Скрипт сборки EXE через PyInstaller.
+Скрипт сборки EXE через PyInstaller
 Запуск: python build.py
 """
 
@@ -11,49 +11,62 @@ import shutil
 APP_NAME = "SteamGuideSaver"
 MAIN_SCRIPT = "__main__.py"
 ICON_FILE = os.path.join("assets", "icon.ico")
+ICON_PNG = os.path.join("assets", "icon.png")
+
+def ensure_icon():
+    """Проверяет наличие .ico, конвертирует из .png если нужно"""
+    if os.path.isfile(ICON_FILE):
+        print(f"✓ Иконка найдена: {ICON_FILE}")
+        return True
+
+    if os.path.isfile(ICON_PNG):
+        print(f"⚠ Файл .ico не найден, конвертирую из .png...")
+        try:
+            from PIL import Image
+            img = Image.open(ICON_PNG)
+            sizes = [(16,16),(24,24),(32,32),(48,48),(64,64),(128,128),(256,256)]
+            img.save(ICON_FILE, format="ICO", sizes=sizes)
+            print(f"✓ Создан: {ICON_FILE}")
+            return True
+        except ImportError:
+            print("⚠ Pillow не установлен, иконка будет стандартная")
+            return False
+        except Exception as e:
+            print(f"⚠ Ошибка конвертации: {e}")
+            return False
+
+    print("⚠ Иконка не найдена, будет стандартная")
+    return False
+
 
 def build():
-    # Базовая команда
+    has_icon = ensure_icon()
+
+    sep = ";" if sys.platform == "win32" else ":"
+
     cmd = [
         sys.executable, "-m", "PyInstaller",
-
-        # === Один файл ===
         "--onefile",
-
-        # === Без консоли (GUI) ===
         "--windowed",
         "--noconsole",
-
-        # === Имя выходного файла ===
         "--name", APP_NAME,
-
-        # === Иконка (если есть) ===
     ]
 
-    if os.path.isfile(ICON_FILE):
+    # Иконка
+    if has_icon:
         cmd.extend(["--icon", ICON_FILE])
-        print(f"✓ Иконка: {ICON_FILE}")
-    else:
-        print("⚠ Иконка не найдена, будет стандартная")
 
-    # === Добавляем файлы данных ===
-
-    # Темы QSS
+    # Данные
     if os.path.isdir("themes"):
-        # Формат: --add-data "source;destination" (Windows)
-        # Формат: --add-data "source:destination" (Linux/Mac)
-        sep = ";" if sys.platform == "win32" else ":"
         cmd.extend(["--add-data", f"themes{sep}themes"])
         print("✓ Темы включены")
 
-    # Папка assets
     if os.path.isdir("assets"):
-        sep = ";" if sys.platform == "win32" else ":"
         cmd.extend(["--add-data", f"assets{sep}assets"])
         print("✓ Assets включены")
 
-    # === Скрытые импорты (на всякий случай) ===
-    hidden_imports = [
+    # Скрытые импорты
+    hidden = [
         "PyQt6.QtWidgets",
         "PyQt6.QtCore",
         "PyQt6.QtGui",
@@ -61,23 +74,20 @@ def build():
         "docx",
         "PIL",
         "requests",
+        "lxml",
     ]
-    for imp in hidden_imports:
+    for imp in hidden:
         cmd.extend(["--hidden-import", imp])
 
-    # === Главный скрипт ===
     cmd.append(MAIN_SCRIPT)
 
     print(f"\n{'='*50}")
     print(f"Сборка: {APP_NAME}")
-    print(f"Команда: {' '.join(cmd)}")
     print(f"{'='*50}\n")
 
-    # Запуск
     result = subprocess.run(cmd)
 
     if result.returncode == 0:
-        # Определяем путь к exe
         if sys.platform == "win32":
             exe_path = os.path.join("dist", f"{APP_NAME}.exe")
         else:
@@ -90,13 +100,10 @@ def build():
             print(f"Файл: {os.path.abspath(exe_path)}")
             print(f"Размер: {size_mb:.1f} MB")
             print(f"{'='*50}")
-        else:
-            print(f"\n⚠ Файл не найден: {exe_path}")
     else:
-        print(f"\n❌ ERROR (код {result.returncode})")
+        print(f"\n❌ Ошибка сборки (код {result.returncode})")
 
-    # Очистка
-    cleanup = input("\nDel build/ и .spec? (y/n): ").strip().lower()
+    cleanup = input("\nУдалить build/ и .spec? (y/n): ").strip().lower()
     if cleanup == 'y':
         for d in ["build", "__pycache__"]:
             if os.path.isdir(d):
