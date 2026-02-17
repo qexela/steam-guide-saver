@@ -1,0 +1,27 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+*.spec
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === APPS ===
+settings.json
+downloader.log
+Steam_Manuals/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,202 @@
+/* === STEAM THEME === */
+
+QMainWindow {
+    background-color: #1b2838;
+}
+
+QWidget {
+    background-color: #1b2838;
+    color: #c7d5e0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 10pt;
+}
+
+QGroupBox {
+    border: 1px solid #2a475e;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding-top: 16px;
+    font-weight: bold;
+    color: #66c0f4;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 0 6px;
+    color: #66c0f4;
+}
+
+QLineEdit {
+    background-color: #2a475e;
+    border: 2px solid #3a6a8a;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #c7d5e0;
+    selection-background-color: #1a9fff;
+}
+QLineEdit:focus {
+    border-color: #66c0f4;
+    background-color: #2e5070;
+}
+
+QPushButton {
+    background-color: #2a475e;
+    border: 2px solid #3a6a8a;
+    border-radius: 6px;
+    padding: 8px 20px;
+    color: #c7d5e0;
+    font-weight: bold;
+    min-height: 20px;
+}
+QPushButton:hover {
+    background-color: #3a6a8a;
+    border-color: #66c0f4;
+    color: #ffffff;
+}
+QPushButton:pressed {
+    background-color: #1a9fff;
+}
+QPushButton:disabled {
+    background-color: #1b2838;
+    color: #4a6a80;
+}
+
+QPushButton#btn_download {
+    background-color: #5c7e10;
+    border-color: #6d8c14;
+    color: #d2efa9;
+    font-size: 11pt;
+    padding: 10px 30px;
+}
+QPushButton#btn_download:hover {
+    background-color: #6d8c14;
+    color: #ffffff;
+}
+QPushButton#btn_download:disabled {
+    background-color: #3a5010;
+    color: #6a8a40;
+}
+
+QPushButton#btn_cancel {
+    background-color: #8f1d14;
+    border-color: #aa2820;
+    color: #ffcccc;
+}
+QPushButton#btn_cancel:hover {
+    background-color: #aa2820;
+}
+QPushButton#btn_cancel:disabled {
+    background-color: #4a1a14;
+    color: #6a4a44;
+}
+
+QTextEdit {
+    background-color: #171a21;
+    border: 2px solid #2a475e;
+    border-radius: 6px;
+    padding: 8px;
+    color: #66c0f4;
+    font-family: "Cascadia Code", "Consolas", monospace;
+    font-size: 9pt;
+}
+
+QComboBox {
+    background-color: #2a475e;
+    border: 2px solid #3a6a8a;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #c7d5e0;
+    min-width: 120px;
+}
+QComboBox:hover {
+    border-color: #66c0f4;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+}
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #66c0f4;
+    margin-right: 8px;
+}
+QComboBox QAbstractItemView {
+    background-color: #2a475e;
+    border: 2px solid #3a6a8a;
+    selection-background-color: #1a9fff;
+    color: #c7d5e0;
+}
+
+QCheckBox {
+    color: #c7d5e0;
+    spacing: 8px;
+}
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #3a6a8a;
+    border-radius: 4px;
+    background-color: #2a475e;
+}
+QCheckBox::indicator:checked {
+    background-color: #1a9fff;
+    border-color: #66c0f4;
+}
+
+QProgressBar {
+    background-color: #171a21;
+    border: 2px solid #2a475e;
+    border-radius: 6px;
+    min-height: 10px;
+    max-height: 10px;
+}
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #5c7e10, stop:1 #a4d007);
+    border-radius: 4px;
+}
+
+QLabel#title_label {
+    font-size: 16pt;
+    font-weight: bold;
+    color: #66c0f4;
+}
+QLabel#subtitle_label {
+    font-size: 8pt;
+    color: #4a6a80;
+}
+
+QMenuBar {
+    background-color: #171a21;
+    color: #c7d5e0;
+    border-bottom: 1px solid #2a475e;
+}
+QMenuBar::item:selected {
+    background-color: #2a475e;
+}
+QMenu {
+    background-color: #1b2838;
+    border: 1px solid #2a475e;
+    color: #c7d5e0;
+}
+QMenu::item:selected {
+    background-color: #1a9fff;
+}
+
+QScrollBar:vertical {
+    background-color: #171a21;
+    width: 12px;
+}
+QScrollBar::handle:vertical {
+    background-color: #2a475e;
+    border-radius: 6px;
+    min-height: 30px;
+}
+QScrollBar::handle:vertical:hover {
+    background-color: #3a6a8a;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
