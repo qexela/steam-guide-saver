@@ -115,7 +115,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXX
 
 | Dark | Light | Steam | Cyberpunk |
 | :--- | :--- | :--- | :--- |
-| Deep blue | Clean white | Steam colors | Neon pink/green |
+| Deep blue | Clean white | Steam colors | Neon pink/turquoise/green |
 
 ## 📁 Project Structure
 
@@ -258,7 +258,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXX
 
 | Тёмная | Светлая | Steam | Киберпанк |
 | :--- | :--- | :--- | :--- |
-| Глубокий синий | Чистый белый | Цвета Steam | Неон розовый/зелёный |
+| Глубокий синий | Чистый белый | Цвета Steam | Неон розовый/бирюзовый/зеленый |
 
 ## 📝 Лицензия
 
