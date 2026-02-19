@@ -9,7 +9,7 @@ with full formatting, images, tables, and hyperlinks preserved.
 ![PyQt6](https://img.shields.io/badge/GUI-PyQt6-green?logo=qt)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20|%20Linux%20|%20Mac-lightgrey)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-Scan_Results-brightgreen)](https://www.virustotal.com/gui/file/9321c2f2c00958d930a5bdc3a00d32169bc8e0cc9e2626b78b8dd8ed418e6a25/detection)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-v2.0.1-brightgreen)](https://www.virustotal.com/gui/file/f228d98933afe3a2522702c287c6a4126fd6fff52f16a67a1eb99807df4e384e)
 
 > 🇷🇺 [Описание на русском — ниже](#-описание-на-русском)
 
