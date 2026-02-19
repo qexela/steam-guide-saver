@@ -9,6 +9,7 @@ with full formatting, images, tables, and hyperlinks preserved.
 ![PyQt6](https://img.shields.io/badge/GUI-PyQt6-green?logo=qt)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20|%20Linux%20|%20Mac-lightgrey)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-Scan_Results-brightgreen)](https://www.virustotal.com/gui/file/9321c2f2c00958d930a5bdc3a00d32169bc8e0cc9e2626b78b8dd8ed418e6a25/detection)
 
 > 🇷🇺 [Описание на русском — ниже](#-описание-на-русском)
 
@@ -29,17 +30,21 @@ with full formatting, images, tables, and hyperlinks preserved.
 
 ## 📸 Screenshots
 
-### Dark Theme
-![Dark Theme](screenshots/dark.png)
+<details>
+<summary>🖼️ Click to view screenshots</summary>
 
-### Light Theme
-![Light Theme](screenshots/light.png)
+<table>
+  <tr>
+    <td align="center"><b>Dark Theme</b><br><img src="screenshots/dark.png" width="400"></td>
+    <td align="center"><b>Light Theme</b><br><img src="screenshots/light.png" width="400"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Steam Theme</b><br><img src="screenshots/steam.png" width="400"></td>
+    <td align="center"><b>Cyberpunk Theme</b><br><img src="screenshots/cyberpunk.png" width="400"></td>
+  </tr>
+</table>
 
-### Steam Theme
-![Steam Theme](screenshots/steam.png)
-
-### Cyberpunk Theme
-![Cyberpunk Theme](screenshots/cyberpunk.png)
+</details>
 
 ## 🚀 Installation
 
@@ -147,6 +152,9 @@ steam-guide-saver/
     ├── clean.ps1
     └── clean.sh
 ```
+## 📖 Steam Guides
+
+- 🇬🇧 [Steam Guide (English)](https://steamcommunity.com/sharedfiles/filedetails/?id=3668298513)
 
 ## 📝 License
 
@@ -259,6 +267,10 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXX
 | Тёмная | Светлая | Steam | Киберпанк |
 | :--- | :--- | :--- | :--- |
 | Глубокий синий | Чистый белый | Цвета Steam | Неон розовый/бирюзовый/зеленый |
+
+## 📖 Steam Guides
+
+- 🇷🇺 [Руководство в Steam (Русский)](https://steamcommunity.com/sharedfiles/filedetails/?id=3668303547)
 
 ## 📝 Лицензия
 

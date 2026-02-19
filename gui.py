@@ -98,9 +98,6 @@ class MainWindow(QMainWindow):
         self.url_group = url_group
         url_layout = QVBoxLayout(url_group)
 
-        self.lbl_url = QLabel()
-        url_layout.addWidget(self.lbl_url)
-
         self.url_input = QLineEdit()
         self.url_input.setPlaceholderText(
             "https://steamcommunity.com/sharedfiles/filedetails/?id=..."
@@ -120,9 +117,6 @@ class MainWindow(QMainWindow):
         path_group = QGroupBox()
         self.path_group = path_group
         path_layout = QVBoxLayout(path_group)
-
-        self.lbl_path = QLabel()
-        path_layout.addWidget(self.lbl_path)
 
         path_row = QHBoxLayout()
         self.path_input = QLineEdit()
@@ -348,9 +342,7 @@ class MainWindow(QMainWindow):
         self.title_label.setText(T("window_title"))
         self.subtitle_label.setText(T("app_subtitle"))
         self.url_group.setTitle(T("lbl_url"))
-        self.lbl_url.setText(T("lbl_url"))
         self.path_group.setTitle(T("lbl_path"))
-        self.lbl_path.setText(T("lbl_path"))
         self.btn_browse.setText(T("btn_browse"))
         self.btn_download.setText(T("btn_download"))
         self.btn_cancel.setText(T("btn_cancel"))
