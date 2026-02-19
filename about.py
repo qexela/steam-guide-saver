@@ -4,7 +4,7 @@ About the application and the author
 """
 
 APP_NAME = "Steam Guide Saver"
-APP_VERSION = "2.0.0"
+APP_VERSION = "2.0.1"
 APP_AUTHOR = "AlexeyQ"
 APP_GITHUB = "https://github.com/qexela/steam-guide-saver"  # ← или ""
 APP_YEAR = "2025"
