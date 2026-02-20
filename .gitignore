@@ -17,17 +17,8 @@ build/
 *~
 
 # === Локальные файлы (не пушить) ===
-GIT_GUIDE.docx
-GIT_GUIDE.pdf
-GIT_GUIDE.md
-_readme_source.py
 _make_icon.py
-_make_git_guide.py
 _make_banner.py
-_make_bannerRU.py
-steam_guide_banner.png
-steam_guide_bannerRU.png
-
 
 # === APPS ===
 settings.json
