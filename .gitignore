@@ -16,7 +16,7 @@ build/
 *.swo
 *~
 
-# === Локальные файлы (не пушить) ===
+# === Utils ===
 _make_icon.py
 _make_banner.py
 
